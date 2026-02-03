@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You Be My Valentine? ❤️</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Страница 1 -->
+        <div class="page active" id="page1">
+            <div class="gif-container">
+                <img src="https://media.giphy.com/media/l41YkuBZbJbWgTAxi/giphy.gif" alt="Cute hearts" class="gif">
+            </div>
+            <div class="question">
+                <h1>Will you be my valentine?</h1>
+            </div>
+            <div class="buttons">
+                <button class="btn yes-btn" onclick="handleYes()">
+                    <i class="fas fa-heart"></i> Of course!
+                </button>
+                <button class="btn no-btn" onclick="nextPage()">
+                    <i class="fas fa-times"></i> No
+                </button>
+            </div>
+        </div>
+
+        <!-- Страница 2 -->
+        <div class="page" id="page2">
+            <div class="gif-container">
+                <img src="https://media.giphy.com/media/26tknCqiJrBQG6DrK/giphy.gif" alt="Puppy eyes" class="gif">
+            </div>
+            <div class="question">
+                <h1>Pleasee be my valentine?</h1>
+            </div>
+            <div class="buttons">
+                <button class="btn yes-btn" onclick="handleYes()">
+                    <i class="fas fa-heart"></i> Of course!
+                </button>
+                <button class="btn no-btn" onclick="nextPage()">
+                    <i class="fas fa-times"></i> No
+                </button>
+            </div>
+        </div>
+
+        <!-- Страница 3 -->
+        <div class="page" id="page3">
+            <div class="gif-container">
+                <img src="https://media.giphy.com/media/l0MYt5jPR6QX5pnqM/giphy.gif" alt="Last try" class="gif">
+            </div>
+            <div class="question">
+                <h1>One last time - Be my valentine</h1>
+            </div>
+            <div class="buttons">
+                <button class="btn yes-btn" onclick="handleYes()">
+                    <i class="fas fa-heart"></i> Of course!
+                </button>
+                <button class="btn no-btn" onclick="nextPage()">
+                    <i class="fas fa-times"></i> I said No
+                </button>
+            </div>
+        </div>
+
+        <!-- Страница 4 (финальная - принуждение) -->
+        <div class="page" id="page4">
+            <div class="image-container">
+                <img src="https://media.giphy.com/media/3o7TKsQ8gTp3WqXqjq/giphy.gif" alt="No choice" class="final-gif">
+            </div>
+            <div class="message">
+                <h2>You left me no choice</h2>
+            </div>
+            <div class="final-button">
+                <button class="btn huge-yes-btn" onclick="showFinalPage()">
+                    <i class="fas fa-heart"></i> Yes my love I'll be your valentine
+                </button>
+            </div>
+        </div>
+
+        <!-- Финальная страница (последняя) -->
+        <div class="page" id="page5">
+            <div class="image-container">
+                <img src="https://media.giphy.com/media/l41lUJ6eIqKGOd5TO/giphy.gif" alt="Celebration" class="final-gif">
+            </div>
+            <div class="message final-message">
+                <h1>Knew you would say yes! ❤️</h1>
+                <p class="subtitle">You've made me the happiest person in the world!</p>
+                <div class="hearts">
+                    <i class="fas fa-heart"></i>
+                    <i class="fas fa-heart"></i>
+                    <i class="fas fa-heart"></i>
+                    <i class="fas fa-heart"></i>
+                    <i class="fas fa-heart"></i>
+                </div>
+                <button class="btn restart-btn" onclick="restartApp()">
+                    <i class="fas fa-redo"></i> Start Over
+                </button>
+            </div>
+        </div>
+
+        <!-- Индикатор прогресса -->
+        <div class="progress">
+            <div class="progress-dot active"></div>
+            <div class="progress-dot"></div>
+            <div class="progress-dot"></div>
+            <div class="progress-dot"></div>
+            <div class="progress-dot"></div>
+        </div>
+    </div>
+
+    <div class="heart-background"></div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
